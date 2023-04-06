@@ -1,0 +1,147 @@
+.history{
+  &-container{
+    padding: {
+      left: 11px;
+      right: 11px;
+    }
+    @include for-mobile {
+      padding: {
+        left: 39px;
+        right: 39px;
+      }
+    }
+    @include for-tablet{
+      padding: {
+        left: 54px;
+        right: 54px;
+      }
+    }
+    @include for-desktop{
+      padding: {
+        left: 93px;
+        right: 93px;
+      }
+    }
+    @include for-desktop-HD{
+      padding: {
+        left: 90px;
+        right: 90px;
+      }
+    }
+  }
+      &__content{
+        margin-top: 60px;
+      }
+      &__card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        @include for-desktop{
+            margin-bottom: 60px;
+        }
+      }
+      &__img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: bottom center;
+        @include for-mobile{
+            height: 300px;
+        }
+        @include for-tablet{
+            width: 320px;
+            height: 190px;
+        }
+        @include for-desktop{
+            width: 400px;
+            height: 200px;
+        }
+        @include for-desktop-HD{
+            width: 600px;
+            height: 360px;
+        }
+      }
+      &__container{
+        &-title{
+            font-size: 25px;
+            color: var(--MainColor);
+            margin-top: 25px;
+            line-height: 30px;
+            @include for-mobile{
+                font-size: 30px;
+                margin-top: 30px;
+                line-height: 40px;
+            }
+            @include for-tablet{
+                font-size: 24px;
+                margin-top: 0px;
+                line-height: 30px;
+            }
+            @include for-desktop{
+                font-size: 30px;
+            }
+            @include for-desktop-HD{
+              font-size: 30px;
+              font-weight: 500;
+              line-height: 40px;
+            }
+            &-word{
+                display: block;
+            }
+        }
+        &-subtitle{
+            font-size: 16px;
+            color: var(--MainColor);
+            margin-top: 40px;
+            line-height: 24px;
+            @include for-mobile{
+                max-width: 520px;
+            }
+            @include for-tablet{
+                max-width: 300px;
+                font-size: 12px;
+                margin-top: 20px;
+                line-height: 20px;
+            }
+            @include for-desktop{
+                max-width: 400px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            @include for-desktop-HD{
+              max-width: 520px;
+              font-weight: 400;
+              font-size: 16px;
+              margin-top: 85px;
+            }
+        }
+        &-button{
+            display: block;
+            text-decoration: none;
+            font-size: 16px;
+            color: var(--MainButtonColor);
+            margin: {
+              top: 20px;
+              bottom: 20px;
+            }
+            &:hover &-word{
+              transition: .5s;
+              margin-left: 10px;
+            }
+            &:hover{
+              transition: 1s;
+              color: var(--HoverColor);
+            }
+            @include for-mobile{
+                margin-top: 30px;
+            }
+            @include for-desktop-HD{
+              margin-top: 85px;
+            }
+            &-word{
+              transition: .5s;
+            }
+        }
+      }
+}

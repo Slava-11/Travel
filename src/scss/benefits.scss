@@ -1,0 +1,205 @@
+.benefits{
+    @include for-desktop-HD{
+        max-width: 1262px;
+        margin: {
+            top: -210px;
+            left: auto;
+            right: auto;
+        }
+        background-color: var(--white);
+    }
+    &-container {
+        padding: {
+            left: 30px;
+            right: 30px;
+        }
+        @include for-mobile {
+            padding: {
+                left: 39px;
+                right: 39px;
+            }
+          }
+          @include for-tablet{
+            padding: {
+                left: 54px;
+                right: 54px;
+            }
+          }
+          @include for-desktop{
+            padding: {
+                left: 93px;
+                right: 93px;
+            }
+          }
+          @include for-desktop-HD{
+            padding: {
+                left: 100px;
+                right: 100px;
+                bottom: 110px;
+            }
+          }
+    }
+    &__title{
+        padding-top: 30px;
+        font-weight: 500;
+        font-size: 29px;
+        color: var(--MainColor);
+        text-align: center;
+        @include for-mobile{
+            text-align: left;
+            padding-top: 15px;
+            font-size: 25px;
+        }
+        @include for-tablet{
+            font-size: 27px;
+            padding-top: 30px;
+        }
+        @include for-desktop{
+            font-size: 35px;
+            padding-top: 40px;
+        }
+        @include for-desktop-HD{
+            padding-top: 93px;
+        }
+ 
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        @include for-mobile{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+    }
+    &__card{
+        max-width: 320px;
+        padding-top: 50px;
+        margin: 0px auto;
+        @include for-mobile{
+            margin-left: 0px;
+            padding-top: 25px;
+        }
+        @include for-tablet{
+            padding-top: 50px;
+        }
+        @include for-desktop{
+            padding-top: 60px;
+        }
+        @include for-desktop-HD{
+            padding-top: 120px;
+        }
+        &-picture{
+            &-img{
+                width: 66px;
+                height: 66px;
+                display: block;
+                margin: 0px auto;
+                @include for-mobile{
+                    margin: 0px;
+                    width: 40px;
+                    height: 40px;
+                }
+                @include for-tablet{
+                    width: 45px;
+                    height: 45px;
+                }
+                @include for-desktop{
+                    width: 66px;
+                    height: 66px;
+                }
+            }
+        }
+        &-title{
+            font-weight: 500px;
+            padding-top: 35px;
+            font-size: 18px;
+            text-align: center;
+            @include for-mobile{
+                text-align: left;
+                font-size: 14px;
+                padding-top: 25px;
+            }
+            @include for-tablet{
+                font-size: 15px;
+                padding-top: 40px;
+            }
+            @include for-desktop{
+                font-size: 18px;
+                padding-top: 60px;
+            }
+            @include for-desktop-HD{
+                padding-top: 37px;
+            }
+        }
+        &subtitle{
+                max-width: 317px;
+                padding-top: 26px;
+            @include for-mobile{
+                max-width: 170px;
+                padding-top: 20px;
+            }
+            @include for-tablet{
+                max-width: 210px;
+                padding-top: 26px;
+            }
+            @include for-desktop{
+                max-width: 270px;
+            }
+            @include for-desktop-HD{
+                max-width: 300px;
+            }
+            &-text{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                @include for-mobile{
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+                @include for-tablet{
+                    font-size: 12px;
+                    line-height: 17px;
+                }
+                @include for-desktop{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+        &-button{
+            padding-top: 40px;
+            @include for-mobile{
+                padding-top: 10px;
+            }
+            @include for-tablet{
+                padding-top: 20px;
+            }
+            @include for-desktop{
+                padding-top: 40px;
+            }
+            &:hover &-word{
+                margin-left: 10px;
+                transition: .5s;
+            }
+             &-learn{
+                text-decoration: none;
+                color: var(--MainButtonColor);
+                font-size: 16px;
+                &:hover{
+                    transition: 1s;
+                    color: var(--HoverColor);
+                  }
+                @include for-mobile{
+                    font-size: 10px;
+                }
+                @include for-tablet{
+                    font-size: 16px;
+                }
+             }
+             &-word{
+                transition: .5s;
+            }
+        }
+    }
+}

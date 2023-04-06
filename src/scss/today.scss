@@ -1,0 +1,197 @@
+.today{
+    &-container{
+        padding: {
+          left: 11px;
+          right: 11px;
+        }
+        @include for-mobile {
+          padding: {
+            left: 39px;
+            right: 39px;
+          }
+        }
+        @include for-tablet{
+          padding: {
+            left: 54px;
+            right: 54px;
+          }
+        }
+        @include for-desktop{
+          padding: {
+            left: 93px;
+            right: 93px;
+          }
+        }
+        @include for-desktop-HD{
+          padding: {
+            left: 90px;
+            right: 90px;
+          }
+        }
+      }
+    &__title{
+        font-size: 30px;
+        font-weight: 500;
+        color: var(--MainColor);
+        @include for-mobile{
+            text-align: center;
+        }
+        @include for-tablet{
+            text-align: left;
+        }
+    }
+    &__wand{
+        margin-top: 7px;
+        width: 220px;
+        height: 3px;
+        background-color: var(--MainButtonColor);
+        @include for-mobile{
+            max-width: 320px;
+            margin: {
+                top: 7px;
+                left: auto;
+                right: auto;
+            }
+        }
+        @include for-tablet{
+            margin-left: 0px;
+        }
+    }
+    &__content{
+        @include for-tablet{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    &__card{
+        max-width: 353px;
+        margin: {
+            top: 50px;
+            left: auto;
+            right: auto;
+        }
+        overflow: hidden;
+        @include for-mobile{
+            margin: {
+                top: 50px;
+                left: auto;
+                right: auto;
+            }
+        }
+        @include for-tablet{
+            margin: {
+                top: 50px;
+                left: 0px;
+                right: 0px;
+            }
+            max-width: 300px;
+        }
+        @include for-desktop{
+            max-width: 353px;
+        }
+        &-img{
+            position: relative;
+            width: 350px;
+            height: 343px;
+            overflow: hidden;
+            @include for-tablet{
+                width: 295px;
+                height: 290px;
+            }
+            @include for-desktop{
+                width: 350px;
+                height: 343px;
+            }
+            &-picture{
+                 max-width: 100%;
+                 max-height: 100%;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+                 display: block;
+                 position: absolute;
+            }
+        }
+        &-container{
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            color: var(--white);
+            width: 100%;
+            box-sizing: border-box;
+            padding: {
+               top: 16px;
+               bottom: 16px;
+               left: 25px;
+            }
+            background-color: #15182499;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+       }
+       &-title{
+        font-size: 18px;
+    }
+    &-subtitle{
+        margin-top: 45px;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--MainColor);
+    }
+    &-button{
+        display: block;
+        max-width: 118px;
+        margin-top: 43px;
+        padding: {
+            top: 12px;
+            bottom: 12px;
+            left: 19px;
+            right: 19px;
+        }
+        text-decoration: none;
+        font-size: 16px;
+        color: var(--white);
+        background-color: var(--MainButtonColor);
+        transition-duration: 1s;
+        &:hover{
+            background-color: var(--HoverColor);
+        }
+        &:active{
+            transition: .1s;
+            color: var(--gray);
+          }
+    }
+    }
+    &__like{
+        cursor: pointer;
+        margin-left: 80px;
+        @include for-tablet{
+            margin-left: 50px;
+        }
+        @include for-desktop{
+            margin-left: 80px;
+        }
+        &-img{
+            margin-left: 10px;
+            width: 14px;
+            height: 14px;
+        }
+    }
+    &__comment{
+        cursor: pointer;
+        margin-right: 20px;
+        @include for-tablet{
+            margin-left: 10px;
+        }
+        @include for-desktop{
+            margin-right: 20px;
+        }
+        &-img{
+            margin-left: 10px;
+            width: 14px;
+            height: 14px;
+        }
+    }
+}

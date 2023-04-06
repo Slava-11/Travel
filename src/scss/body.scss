@@ -1,0 +1,28 @@
+body {
+    user-select: none;
+    font-family: 'Lato', sans-serif;
+    @include for-desktop-HD{
+        background-color: #F2F2F2 ;
+    }
+    &.active{
+      overflow: hidden;
+    }
+}
+::-webkit-scrollbar{
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: gray;
+    box-shadow:  0 0 2px rgba( 0, 0, 0,.2 ) inset;  
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: var(--BackgroundColor);  
+    border-radius: 8px;
+    border: 3px solid gray;
+  
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: #050c12;  
+    
+  }
